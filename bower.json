@@ -1,0 +1,22 @@
+{
+  "name": "l1",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Eason Lu <ylu23@syr.edu>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.2"
+  }
+}
