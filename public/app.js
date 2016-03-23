@@ -15,7 +15,6 @@
                 scope.onLogin = function(info) {
                     console.log(scope.info, info);
                     scope.loginInfo = info;
-
                 };
             }
         ])
@@ -26,18 +25,18 @@
                     info: '=info2',
                     login2: '&'
                 },
-                link: function(scope) {
-                    scope.login = function(user) {
-                        $http.post('/api/login', user).then(function(data) {
-                            // scope.info = data.data;
-                            scope.login2({
-                                info: data.data
+                controller: ['$scope',
+                    function(scope) {
+                        scope.login = function(user) {
+                            $http.post('/api/login', user).then(function(data) {
+                                // scope.info = data.data;
+                                scope.login2({
+                                    info: data.data
+                                });
                             });
-
-                        });
+                        }
                     }
-
-                }
+                ]
             }
         })
 
