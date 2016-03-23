@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
     }
     db.then(function(db) {
         // check if a user exists and validate
-        return db.collection('user').find(user).toArray()
+        return db.collection('users').find(user).toArray()
     }).then(function(users) {
         if (!users || users.length == 0) {
             return {
